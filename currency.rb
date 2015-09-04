@@ -17,21 +17,21 @@ attr_accessor :amount, :type
     if @type == number.type
       Currency.new(@amount +number.amount,@type).amount
       #@amount = @amount + amount
-    else puts "DifferentCurrencyCodeError."
+    else raise TypeError, "DifferentCurrencyCodeError."
     end
   end
 
   def -(number)
     if @type == number.type
     Currency.new(@amount -number.amount,@type).amount
-    else puts "DifferentCurrencyCodeError."
+    else raise TypeError, "DifferentCurrencyCodeError."
     end
   end
 
   def *(number)
     if @type == number.type
       Currency.new(@amount *number.amount,@type).amount
-    else  puts "DifferentCurrencyCodeError."
+    else raise TypeError, "DifferentCurrencyCodeError."
     end
   end
 
