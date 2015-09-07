@@ -30,20 +30,20 @@ attr_accessor :amount, :type
 
   def -(number)
     if @type == number.type
-    Currency.new(@amount -number.amount,@type).amount
+    Currency.new(@amount -number.amount,@type)
     else raise DifferentCurrencyCodeError
     end
   end
 
   def *(number)
     if @type == number.type
-      Currency.new(@amount *number.amount,@type).amount
+      Currency.new(@amount *number.amount,@type)
     else raise DifferentCurrencyCodeError
     end
   end
 
   def to_s
-    puts "#{amount}" "#{type}"
+     "#{@amount}" "#{@type}"
 
   end
 
