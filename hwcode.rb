@@ -3,6 +3,7 @@ require './converter'
 require './error_code'
 
 dollar1 = Currency.new(1.20,"USD")
+dollar_parse = Currency.new("$1.20" )
 dollar2 = Currency.new(1.20,"USD")
 new_dollar = Currency.new(1.20,"USD")
 dollar3 = Currency.new(0.74,"EUR")

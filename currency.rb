@@ -1,11 +1,12 @@
 class Currency
 attr_accessor :amount, :type
 
-  def initialize(amount,type)
+  def initialize(amount,type = nil)
     @code_hash = {USD: "$", EUR: "€"}
     # first_letter = amount[10]
     # the_rest = amount[USD]
 
+    
     @amount = amount
     @type = type
 
